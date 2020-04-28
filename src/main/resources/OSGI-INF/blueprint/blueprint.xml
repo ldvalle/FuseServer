@@ -22,7 +22,6 @@
     <bean id="beanValidationProvider" class="edesur.pangea.ws.BeanValidationProvider">
         <argument ref="validationProviderResolver" />
     </bean>
-
     <bean id="validationProviderResolver" class="edesur.pangea.ws.HibernateValidationProviderResolver" />
 
 

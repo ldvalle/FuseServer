@@ -18,7 +18,8 @@ import java.math.RoundingMode;
         "piso",
         "depto",
         "partido",
-        "localidad"
+        "localidad",
+        "nombreCliente"
 })
 
 public class DirSumResponse {
@@ -45,6 +46,9 @@ public class DirSumResponse {
     @Size(max=25)
     private String localidad;
 
+    @Size(max=60)
+    @NotNull
+    private String nombreCliente;
 
     public void setCodCalle(String codCalle){this.codCalle = codCalle; }
     public String getCodCallle(){ return this.codCalle;}
@@ -67,6 +71,10 @@ public class DirSumResponse {
     public void setLocalidad(String localidad){this.localidad = localidad; }
     public String getLocalidad(){ return this.localidad;}
 
+    public void setNombreCliente(String nombreCliente){this.nombreCliente = nombreCliente; }
+    public String getNombreCliente(){ return this.nombreCliente;}
+
+    
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("DirSumResponse{");
@@ -77,6 +85,7 @@ public class DirSumResponse {
         sb.append(", depto='").append(depto).append('\'');
         sb.append(", partido='").append(partido).append('\'');
         sb.append(", localidad='").append(localidad).append('\'');
+        sb.append(", nombreCliente='").append(nombreCliente).append('\'');
         sb.append('}');
         return sb.toString();
     }
